@@ -1,0 +1,35 @@
+{
+  "name": "roo-blessed",
+  "version": "1.0.0",
+  "description": "Terminal UI client for Roo Code using Blessed",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "ROO_CODE_IPC_SOCKET_PATH=/tmp/roo-code-ipc.sock node index.js",
+    "daemon": "ROO_CODE_IPC_SOCKET_PATH=/tmp/roo-code-ipc.sock node roo-daemon.js",
+    "cli": "node roo-cli.js",
+    "roo": "node roo-cli-enhanced.js",
+    "roo-start": "node roo-cli-enhanced.js start",
+    "roo-ls": "node roo-cli-enhanced.js ls",
+    "roo-interactive": "node roo-cli-enhanced.js interactive",
+    "tmux": "./start-tmux.sh",
+    "dev": "node --watch index.js",
+    "test": "node test-connection.js",
+    "test-ui": "node test-ui.js",
+    "test-daemon": "node test-daemon-cli.js",
+    "setup": "node setup.js",
+    "launch-server": "./launch-code-server.sh",
+    "install-service": "./install-service.sh",
+    "docker-up": "docker-compose up -d",
+    "docker-down": "docker-compose down"
+  },
+  "keywords": ["roo", "blessed", "terminal", "ui", "ipc"],
+  "author": "Roo Code",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "node-ipc": "^12.0.0",
+    "chalk": "^5.3.0",
+    "strip-ansi": "^7.1.0"
+  }
+}

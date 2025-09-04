@@ -1,0 +1,11 @@
+# Roo Code Server Configuration
+# Place this file at ~/.config/code-server/config.yaml
+
+bind-addr: 0.0.0.0:8080
+auth: password
+password: your-secure-password-here
+cert: false
+
+# Roo-specific environment variables
+# These will be set automatically by the launch script
+# ROO_CODE_IPC_SOCKET_PATH: /tmp/roo-code-ipc.sock
