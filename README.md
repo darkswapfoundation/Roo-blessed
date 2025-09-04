@@ -158,6 +158,61 @@ We use [changesets](https://github.com/changesets/changesets) for versioning and
 
 ---
 
+## Roo-blessed: A Terminal-Based UI for Roo Code
+
+**Roo-blessed** is a terminal-based user interface for Roo Code, built with the `blessed` library. It provides a lightweight, keyboard-driven alternative to the standard VS Code extension, allowing you to interact with Roo Code directly from your terminal.
+
+### Features
+
+- **Terminal-Based Interface**: Interact with Roo Code without leaving your terminal.
+- **Lightweight and Fast**: Built with `blessed`, a low-level terminal rendering library.
+- **Extensible**: The project is designed to be easily extended with new features and components.
+
+### Getting Started
+
+#### Prerequisites
+
+- **Node.js**: Ensure you have Node.js installed.
+- **Roo Code**: The `Roo-blessed` project is included in the main Roo Code repository.
+
+#### Installation
+
+1.  **Clone the repository**:
+    ```sh
+    git clone https://github.com/darkswapfoundation/Roo-blessed.git
+    ```
+2.  **Navigate to the project directory**:
+    ```sh
+    cd Roo-blessed
+    ```
+3.  **Install dependencies**:
+    ```sh
+    pnpm install
+    ```
+
+#### Running Roo-blessed
+
+To run the `Roo-blessed` interface, execute the following command from the project root:
+
+```sh
+node roo-blessed/index.js
+```
+
+This will launch the terminal-based UI, where you can interact with Roo Code.
+
+### How It Works
+
+`Roo-blessed` communicates with a local `code-server` instance, which runs a headless version of VS Code. This allows the terminal interface to interact with the Roo Code extension and its associated tools.
+
+The project consists of two main parts:
+
+1.  **`roo-blessed/index.js`**: The main application file, which sets up the `blessed` UI and handles user input.
+2.  **`roo-blessed/launch-code-server.sh`**: A shell script that launches the `code-server` instance and configures it to work with `Roo-blessed`.
+
+When you run `roo-blessed/index.js`, it automatically starts the `code-server` in the background, establishing a connection between the terminal UI and the Roo Code extension.
+
+---
+
 ## Disclaimer
 
 **Please note** that Roo Code, Inc does **not** make any representations or warranties regarding any code, models, or other tools provided or made available in connection with Roo Code, any associated third-party tools, or any resulting outputs. You assume **all risks** associated with the use of any such tools or outputs; such tools are provided on an **"AS IS"** and **"AS AVAILABLE"** basis. Such risks may include, without limitation, intellectual property infringement, cyber vulnerabilities or attacks, bias, inaccuracies, errors, defects, viruses, downtime, property loss or damage, and/or personal injury. You are solely responsible for your use of any such tools or outputs (including, without limitation, the legality, appropriateness, and results thereof).
